@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import IndustriesPage from "./pages/Industries";
+import WhatsAppFAB from "./components/WhatsAppFAB";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/industries" element={<IndustriesPage />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <WhatsAppFAB />
     </Router>
   );
 }
