@@ -46,9 +46,9 @@ const IndustriesPage = () => {
               {/* Center: Copy */}
               <FadeIn direction="right" delay={0.2} className="lg:col-span-12 max-w-4xl mx-auto text-center lg:text-left">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFB800]/20 border border-[#FFB800]/30 mb-6">
-                  <span className="w-2 h-2 rounded-full bg-[#FFB800] animate-pulse" />
-                  <span className="text-[10px] font-extrabold tracking-widest text-[#FFB800] uppercase">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/20 border border-primary-400/30 mb-6">
+                  <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse" />
+                  <span className="text-[10px] font-extrabold tracking-widest text-primary-300 uppercase">
                     Logistics Solutions
                   </span>
                 </div>
@@ -56,7 +56,7 @@ const IndustriesPage = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
                   Tailored Logistics <br />
                   for{" "}
-                  <span className="text-[#FFB800]">Every Industry</span>
+                  <span className="text-primary-300">Every Industry</span>
                 </h1>
 
                 <p className="text-white/75 text-base sm:text-lg max-w-2xl leading-relaxed mb-10">
@@ -68,7 +68,7 @@ const IndustriesPage = () => {
                 <div className="flex flex-wrap gap-4">
                   <a
                     href="/contact"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#FFB800] hover:bg-[#E5A500] text-[#0B1528] font-extrabold text-sm rounded-xl transition-all duration-200 shadow-lg shadow-[#FFB800]/20"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-extrabold text-sm rounded-xl transition-all duration-200 shadow-lg shadow-primary-600/20"
                   >
                     Connect with an Expert
                     <ArrowRight className="h-4 w-4" />
@@ -77,7 +77,7 @@ const IndustriesPage = () => {
                     href="tel:+914842900800"
                     className="inline-flex items-center gap-2 px-7 py-3.5 border border-white/20 hover:border-white/40 text-white font-bold text-sm rounded-xl transition-all duration-200 bg-white/5 backdrop-blur-sm"
                   >
-                    <Phone className="h-4 w-4 text-[#FFB800]" />
+                    <Phone className="h-4 w-4 text-primary-300" />
                     +91 484 2900 800
                   </a>
                 </div>
@@ -88,7 +88,7 @@ const IndustriesPage = () => {
                     {["VK", "AM", "JD", "RN"].map((init) => (
                       <div
                         key={init}
-                        className="w-8 h-8 rounded-full bg-blue-600 border-2 border-[#0B1528] flex items-center justify-center text-[9px] font-extrabold text-white"
+                        className="w-8 h-8 rounded-full bg-primary-600 border-2 border-[#0B1528] flex items-center justify-center text-[9px] font-extrabold text-white"
                       >
                         {init}
                       </div>
@@ -111,13 +111,13 @@ const IndustriesPage = () => {
             {/* Heading */}
             <FadeIn direction="up">
               <div className="mb-12">
-                <span className="text-[10px] font-extrabold tracking-widest text-blue-600 uppercase block mb-3">
+                <span className="text-[10px] font-extrabold tracking-widest text-primary-600 uppercase block mb-3">
                   Specialized Verticals
                 </span>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">
                   Industries We Empower
                 </h2>
-                <div className="w-12 h-1 bg-[#FFB800] rounded-full" />
+                <div className="w-12 h-1 bg-primary-500 rounded-full" />
               </div>
             </FadeIn>
 
@@ -135,15 +135,15 @@ const IndustriesPage = () => {
 
                 {/* Play button */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-14 h-14 bg-[#FFB800] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer">
-                    <Play className="h-6 w-6 text-[#0B1528] fill-current ml-0.5" />
+                  <div className="w-14 h-14 bg-primary-600 hover:bg-primary-700 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer">
+                    <Play className="h-6 w-6 text-white fill-current ml-0.5" />
                   </div>
                 </div>
 
                 <div className="relative z-10 p-8">
                   <div className="flex items-center gap-2 mb-3">
-                    <ShoppingCart className="h-5 w-5 text-[#FFB800]" />
-                    <span className="text-[10px] font-extrabold tracking-widest text-[#FFB800] uppercase">
+                    <ShoppingCart className="h-5 w-5 text-primary-300" />
+                    <span className="text-[10px] font-extrabold tracking-widest text-primary-300 uppercase">
                       E-commerce
                     </span>
                   </div>
@@ -165,10 +165,10 @@ const IndustriesPage = () => {
 
               {/* Healthcare */}
               <FadeIn direction="up" delay={0.2} className="lg:col-span-5 bg-[#002557] rounded-3xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300 h-full">
-                <div className="absolute -bottom-12 -right-12 w-40 h-40 bg-blue-400/10 rounded-full pointer-events-none" />
+                <div className="absolute -bottom-12 -right-12 w-40 h-40 bg-primary-400/10 rounded-full pointer-events-none" />
                 <div>
                   <div className="p-3 bg-white/10 rounded-2xl w-fit mb-5">
-                    <HeartPulse className="h-6 w-6 text-[#FFB800]" />
+                    <HeartPulse className="h-6 w-6 text-primary-300" />
                   </div>
                   <h3 className="text-2xl font-extrabold text-white mb-3">Healthcare</h3>
                   <p className="text-white/70 text-sm leading-relaxed mb-6">
@@ -181,7 +181,7 @@ const IndustriesPage = () => {
                 </div>
                 <a
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-[#FFB800] font-extrabold text-sm mt-8 hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-1.5 text-primary-300 font-extrabold text-sm mt-8 hover:gap-3 transition-all"
                 >
                   View SOS <ArrowRight className="h-4 w-4" />
                 </a>
@@ -202,8 +202,8 @@ const IndustriesPage = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
                   <div className="relative z-10 p-6">
                     <div className="flex items-center gap-2 mb-2">
-                      <Factory className="h-4 w-4 text-[#FFB800]" />
-                      <span className="text-[9px] font-extrabold tracking-widest text-[#FFB800] uppercase">Manufacturing</span>
+                      <Factory className="h-4 w-4 text-primary-300" />
+                      <span className="text-[9px] font-extrabold tracking-widest text-primary-300 uppercase">Manufacturing</span>
                     </div>
                     <h3 className="text-lg font-extrabold text-white mb-3">
                       Industrial Transport Solutions
@@ -230,8 +230,8 @@ const IndustriesPage = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent" />
                   <div className="relative z-10 p-6">
                     <div className="flex items-center gap-2 mb-2">
-                      <Store className="h-4 w-4 text-[#FFB800]" />
-                      <span className="text-[9px] font-extrabold tracking-widest text-[#FFB800] uppercase">Retail Chain</span>
+                      <Store className="h-4 w-4 text-primary-300" />
+                      <span className="text-[9px] font-extrabold tracking-widest text-primary-300 uppercase">Retail Chain</span>
                     </div>
                     <h3 className="text-lg font-extrabold text-white mb-3">
                       Multi-channel Distribution
@@ -251,10 +251,10 @@ const IndustriesPage = () => {
               <FadeIn direction="up" delay={0.5}>
                 <div className="bg-amber-50 border border-amber-200/50 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-300 group h-full">
                   <div>
-                    <div className="p-3 bg-[#FFB800]/20 rounded-2xl w-fit mb-5">
-                      <Package className="h-6 w-6 text-[#FFB800]" />
+                    <div className="p-3 bg-primary-500/20 rounded-2xl w-fit mb-5">
+                      <Package className="h-6 w-6 text-primary-300" />
                     </div>
-                    <span className="text-[9px] font-extrabold tracking-widest text-[#FFB800] uppercase block mb-2">FMCG</span>
+                    <span className="text-[9px] font-extrabold tracking-widest text-primary-300 uppercase block mb-2">FMCG</span>
                     <h3 className="text-xl font-extrabold text-slate-900 mb-3">
                       Fast-Moving Consumer Goods
                     </h3>
@@ -263,7 +263,7 @@ const IndustriesPage = () => {
                     </p>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Zap className="h-4 w-4 text-[#FFB800]" />
+                    <Zap className="h-4 w-4 text-primary-300" />
                     <span className="text-xs font-bold text-slate-700">20+ Cities Distribution Reach</span>
                   </div>
                 </div>
@@ -276,11 +276,11 @@ const IndustriesPage = () => {
               {/* Corporate Partnerships */}
               <FadeIn direction="up" delay={0.6} className="lg:col-span-7 bg-white border border-slate-200/60 rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="p-3 bg-blue-50 rounded-2xl">
+                  <div className="p-3 bg-primary-50 rounded-2xl">
                     <Briefcase className="h-6 w-6 text-[#002557]" />
                   </div>
                   <div>
-                    <span className="text-[9px] font-extrabold tracking-widest text-blue-600 uppercase block">Enterprise</span>
+                    <span className="text-[9px] font-extrabold tracking-widest text-primary-600 uppercase block">Enterprise</span>
                     <h3 className="text-xl font-extrabold text-slate-900">Corporate Partnerships</h3>
                   </div>
                 </div>
@@ -322,20 +322,20 @@ const IndustriesPage = () => {
         {/* ── Consultant CTA ── */}
         <section className="bg-[#0B1528] py-20 relative overflow-hidden">
           {/* Ambient glows */}
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#FFB800]/10 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-600/15 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-primary-500/10 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
               {/* Left: Copy + Buttons */}
               <FadeIn direction="right" className="lg:col-span-7">
-                <span className="text-[10px] font-extrabold tracking-widest text-[#FFB800] uppercase block mb-4">
+                <span className="text-[10px] font-extrabold tracking-widest text-primary-300 uppercase block mb-4">
                   Consult with an Industry Advisor
                 </span>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-5 leading-tight">
                   Let's Solve Your Industry's <br />
-                  <span className="text-[#FFB800]">Logistics Challenges</span>
+                  <span className="text-primary-300">Logistics Challenges</span>
                 </h2>
                 <p className="text-white/65 text-sm sm:text-base leading-relaxed mb-10 max-w-xl">
                   Connect with a specialized consultant to design a supply chain that drives cost advantage and gives your company the competitive edge in the Kerala market.
@@ -343,7 +343,7 @@ const IndustriesPage = () => {
                 <div className="flex flex-wrap gap-4">
                   <a
                     href="/contact"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-[#FFB800] hover:bg-[#E5A500] text-[#0B1528] font-extrabold text-sm rounded-xl transition-all duration-200 shadow-lg shadow-[#FFB800]/15"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-extrabold text-sm rounded-xl transition-all duration-200 shadow-lg shadow-primary-600/15"
                   >
                     <Calendar className="h-4 w-4" />
                     Schedule Consultation
@@ -352,7 +352,7 @@ const IndustriesPage = () => {
                     href="tel:+914842900800"
                     className="inline-flex items-center gap-2 px-8 py-4 border border-white/20 hover:border-white/40 text-white font-bold text-sm rounded-xl transition-all duration-200 bg-white/5"
                   >
-                    <Phone className="h-4 w-4 text-[#FFB800]" />
+                    <Phone className="h-4 w-4 text-primary-300" />
                     Call +91 484 2900 800
                   </a>
                 </div>
@@ -383,7 +383,7 @@ const IndustriesPage = () => {
                     ))}
                   </div>
                   <div className="mt-4 pt-4 border-t border-white/10 text-center">
-                    <span className="text-2xl font-black text-[#FFB800]">6</span>
+                    <span className="text-2xl font-black text-primary-300">6</span>
                     <span className="text-xs font-bold text-white/50 ml-1.5">Specialized Verticals</span>
                   </div>
                 </div>

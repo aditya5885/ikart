@@ -31,14 +31,14 @@ const Partnership = () => {
         <div className="bg-[#0B1528] rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-2 relative">
 
           {/* Ambient glow */}
-          <div className="absolute top-0 left-0 w-80 h-80 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-0 left-0 w-80 h-80 bg-primary-600/10 rounded-full blur-[120px] pointer-events-none" />
 
           {/* ── Left: Content ── */}
           <FadeIn direction="right" className="relative z-10 p-10 sm:p-14 lg:p-16 flex flex-col justify-center text-left w-full">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFB800]/15 border border-[#FFB800]/25 w-fit mb-6">
-              <span className="w-1.5 h-1.5 bg-[#FFB800] rounded-full" />
-              <span className="text-[10px] font-extrabold tracking-widest text-[#FFB800] uppercase">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/15 border border-primary-400/25 w-fit mb-6">
+              <span className="w-1.5 h-1.5 bg-primary-500 rounded-full" />
+              <span className="text-[10px] font-extrabold tracking-widest text-primary-300 uppercase">
                 Partner With iKart
               </span>
             </div>
@@ -46,7 +46,7 @@ const Partnership = () => {
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4 leading-tight">
               Scale Your Business <br />
               with{" "}
-              <span className="text-[#FFB800]">Corporate Partnerships</span>
+              <span className="text-primary-300">Corporate Partnerships</span>
             </h2>
             <p className="text-slate-400 text-sm leading-relaxed mb-10 max-w-md">
               Join 500+ enterprises that rely on iKart for dedicated logistics frameworks,
@@ -59,8 +59,8 @@ const Partnership = () => {
                 const Icon = b.icon;
                 return (
                   <li key={i} className="flex items-start gap-4 group">
-                    <div className="flex-shrink-0 p-2 bg-white/[0.06] border border-white/10 rounded-xl group-hover:bg-[#FFB800]/15 group-hover:border-[#FFB800]/20 transition-all duration-200">
-                      <Icon className="h-4 w-4 text-[#FFB800]" />
+                    <div className="flex-shrink-0 p-2 bg-white/[0.06] border border-white/10 rounded-xl group-hover:bg-primary-500/15 group-hover:border-primary-400/20 transition-all duration-200">
+                      <Icon className="h-4 w-4 text-primary-300" />
                     </div>
                     <span className="text-sm text-slate-300 leading-relaxed pt-1 font-medium">
                       {b.text}
@@ -86,7 +86,7 @@ const Partnership = () => {
             {/* CTA */}
             <a
               href="/contact"
-              className="self-start inline-flex items-center gap-2 px-8 py-4 bg-[#FFB800] hover:bg-[#E5A500] text-[#0B1528] font-extrabold text-sm rounded-xl transition-all duration-200 shadow-lg shadow-[#FFB800]/15 group"
+              className="self-start inline-flex items-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-extrabold text-sm rounded-xl transition-all duration-200 shadow-lg shadow-primary-600/15 group"
             >
               Become a Partner
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -112,7 +112,7 @@ const Partnership = () => {
               <span className="text-[9px] font-extrabold tracking-widest text-white/50 uppercase block mb-2">
                 Active Partners
               </span>
-              <span className="text-3xl font-black text-[#FFB800] block leading-none mb-1">500+</span>
+              <span className="text-3xl font-black text-primary-300 block leading-none mb-1">500+</span>
               <span className="text-[10px] font-semibold text-emerald-400">↑ 18% this year</span>
             </div>
           </FadeIn>

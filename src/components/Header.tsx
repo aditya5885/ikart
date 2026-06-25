@@ -28,7 +28,7 @@ const Header = () => {
                             <a
                                 key={link.label}
                                 href={link.href}
-                                className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors duration-200"
+                                className="text-sm font-medium text-slate-600 hover:text-primary-600 transition-colors duration-200"
                             >
                                 {link.label}
                             </a>
@@ -39,7 +39,7 @@ const Header = () => {
                     <div className="hidden md:flex items-center space-x-6">
                         <a
                             href="/contact"
-                            className="text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors duration-200 py-2"
+                            className="text-sm font-semibold text-slate-700 hover:text-primary-600 transition-colors duration-200 py-2"
                         >
                             Request Pickup
                         </a>
@@ -83,7 +83,7 @@ const Header = () => {
                             key={link.label}
                             href={link.href}
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 transition-all duration-200"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-primary-600 hover:bg-slate-50 transition-all duration-200"
                         >
                             {link.label}
                         </a>

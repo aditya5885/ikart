@@ -29,17 +29,17 @@ const Services = () => {
         
         {/* 1. Hero Section */}
         <section className="relative bg-[#0B1528] py-20 text-white overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-600/10 rounded-full blur-[120px] pointer-events-none" />
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none" />
 
           <FadeIn direction="up" delay={0.2} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left z-10">
             {/* Badge */}
-            <span className="inline-block bg-amber-500/20 text-[#FFB800] border border-amber-500/30 text-[10px] font-extrabold tracking-widest px-3 py-1 rounded uppercase mb-6">
+            <span className="inline-block bg-amber-500/20 text-primary-300 border border-amber-500/30 text-[10px] font-extrabold tracking-widest px-3 py-1 rounded uppercase mb-6">
               OUR CAPABILITIES
             </span>
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-6 max-w-4xl">
-              Comprehensive <br /> Logistics <span className="text-[#FFB800]">Redefined.</span>
+              Comprehensive <br /> Logistics <span className="text-primary-300">Redefined.</span>
             </h1>
             {/* Subtitle */}
             <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-3xl leading-relaxed mb-8 font-medium">
@@ -49,7 +49,7 @@ const Services = () => {
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href="#express-parcel"
-                className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm rounded-xl transition-colors duration-200 shadow-md shadow-blue-600/10"
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-extrabold text-sm rounded-xl transition-colors duration-200 shadow-md shadow-primary-600/10"
               >
                 Explore Services
               </a>
@@ -91,7 +91,7 @@ const Services = () => {
               <FadeIn direction="up" delay={0.1}>
                 <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all duration-300 h-full">
                   <div>
-                    <div className="p-3.5 bg-blue-50 text-blue-600 rounded-2xl w-fit mb-6">
+                    <div className="p-3.5 bg-primary-50 text-primary-600 rounded-2xl w-fit mb-6">
                       <Zap className="h-6 w-6" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-3">Same Day Delivery</h3>
@@ -109,7 +109,7 @@ const Services = () => {
                       </div>
                     </div>
                   </div>
-                  <a href="/contact" className="inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors mt-8 self-start gap-1">
+                  <a href="/contact" className="inline-flex items-center text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors mt-8 self-start gap-1">
                     Learn More <ArrowRight className="h-3.5 w-3.5" />
                   </a>
                 </div>
@@ -119,7 +119,7 @@ const Services = () => {
               <FadeIn direction="up" delay={0.2}>
                 <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all duration-300 h-full">
                   <div>
-                    <div className="p-3.5 bg-blue-50 text-blue-600 rounded-2xl w-fit mb-6">
+                    <div className="p-3.5 bg-primary-50 text-primary-600 rounded-2xl w-fit mb-6">
                       <Clock className="h-6 w-6" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-3">Next Day Delivery</h3>
@@ -137,7 +137,7 @@ const Services = () => {
                       </div>
                     </div>
                   </div>
-                  <a href="/contact" className="inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors mt-8 self-start gap-1">
+                  <a href="/contact" className="inline-flex items-center text-xs font-bold text-primary-600 hover:text-primary-800 transition-colors mt-8 self-start gap-1">
                     Learn More <ArrowRight className="h-3.5 w-3.5" />
                   </a>
                 </div>
@@ -154,7 +154,7 @@ const Services = () => {
                   <div className="absolute -inset-1 bg-gradient-to-t from-slate-950 via-transparent to-transparent pointer-events-none" />
 
                   <div className="relative z-10">
-                    <span className="inline-block bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[9px] font-bold tracking-widest px-2.5 py-1 rounded uppercase mb-6">
+                    <span className="inline-block bg-primary-500/10 text-primary-400 border border-primary-500/20 text-[9px] font-bold tracking-widest px-2.5 py-1 rounded uppercase mb-6">
                       INTERNATIONAL
                     </span>
                     <h3 className="text-2xl font-bold text-white mb-3">Global Network</h3>
@@ -162,7 +162,7 @@ const Services = () => {
                       Connecting 220+ countries with seamless air and road connectivity.
                     </p>
                   </div>
-                  <a href="/contact" className="relative z-10 inline-flex items-center text-xs font-black text-[#FFB800] hover:text-[#E5A500] transition-colors mt-12 self-start gap-1">
+                  <a href="/contact" className="relative z-10 inline-flex items-center text-xs font-black text-primary-300 hover:text-white transition-colors mt-12 self-start gap-1">
                     View Network Map <ArrowUpRight className="h-4 w-4" />
                   </a>
                 </div>
@@ -197,7 +197,7 @@ const Services = () => {
                 <div className="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-12 hover:shadow-md transition-all duration-300 h-full">
                   <div className="p-8 md:p-10 md:col-span-7 flex flex-col justify-between text-left">
                     <div>
-                      <span className="text-[10px] font-black text-blue-600 tracking-wider uppercase mb-2 block">
+                      <span className="text-[10px] font-black text-primary-600 tracking-wider uppercase mb-2 block">
                         BUSINESS LOGISTICS
                       </span>
                       <h3 className="text-xl font-bold text-slate-900 mb-3">
@@ -231,9 +231,9 @@ const Services = () => {
               {/* Card 2: E-commerce Marketplace */}
               <FadeIn direction="up" delay={0.2}>
                 <div className="bg-[#0B1528] rounded-3xl p-8 text-white flex flex-col justify-between relative overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl h-full">
-                  <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-blue-600 rounded-full blur-[80px] opacity-20 pointer-events-none" />
+                  <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-primary-600 rounded-full blur-[80px] opacity-20 pointer-events-none" />
                   <div className="relative z-10">
-                    <div className="p-3 bg-yellow-500/10 border border-yellow-500/20 text-[#FFB800] rounded-2xl w-fit mb-6">
+                    <div className="p-3 bg-cyan-500/10 border border-cyan-500/20 text-primary-300 rounded-2xl w-fit mb-6">
                       <ShoppingCart className="h-6 w-6" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">
@@ -243,7 +243,7 @@ const Services = () => {
                       Multi-channel fulfillment, inventory synchronization, and white-labeled packaging to elevate your brand experience.
                     </p>
                   </div>
-                  <button className="relative z-10 mt-8 w-full bg-[#FFB800] hover:bg-[#E5A500] text-slate-900 font-extrabold py-3 px-6 rounded-xl transition-colors text-sm shadow-md">
+                  <button className="relative z-10 mt-8 w-full bg-primary-600 hover:bg-primary-700 text-white font-extrabold py-3 px-6 rounded-xl transition-colors text-sm shadow-md">
                     Setup Marketplace
                   </button>
                 </div>
@@ -253,7 +253,7 @@ const Services = () => {
               <FadeIn direction="up" delay={0.3}>
                 <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all duration-300 h-full">
                   <div>
-                    <div className="p-3 bg-blue-50 text-blue-600 rounded-2xl w-fit mb-6">
+                    <div className="p-3 bg-primary-50 text-primary-600 rounded-2xl w-fit mb-6">
                       <MapPin className="h-6 w-6" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-3">Last Mile</h3>
@@ -323,7 +323,7 @@ const Services = () => {
               
               {/* Left Column: Bullet list */}
               <FadeIn direction="right" className="lg:col-span-7">
-                <span className="text-xs font-extrabold text-blue-600 tracking-widest uppercase mb-2 block">
+                <span className="text-xs font-extrabold text-primary-600 tracking-widest uppercase mb-2 block">
                   INFRASTRUCTURE
                 </span>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-8">
@@ -335,7 +335,7 @@ const Services = () => {
                   
                   {/* Item 1 */}
                   <div className="flex gap-4 items-start">
-                    <div className="p-3 bg-blue-50 text-blue-600 rounded-xl flex-shrink-0 mt-1">
+                    <div className="p-3 bg-primary-50 text-primary-600 rounded-xl flex-shrink-0 mt-1">
                       <Database className="h-5 w-5" />
                     </div>
                     <div>
@@ -350,7 +350,7 @@ const Services = () => {
 
                   {/* Item 2 */}
                   <div className="flex gap-4 items-start">
-                    <div className="p-3 bg-blue-50 text-blue-600 rounded-xl flex-shrink-0 mt-1">
+                    <div className="p-3 bg-primary-50 text-primary-600 rounded-xl flex-shrink-0 mt-1">
                       <RotateCcw className="h-5 w-5" />
                     </div>
                     <div>
@@ -365,7 +365,7 @@ const Services = () => {
 
                   {/* Item 3 */}
                   <div className="flex gap-4 items-start">
-                    <div className="p-3 bg-blue-50 text-blue-600 rounded-xl flex-shrink-0 mt-1">
+                    <div className="p-3 bg-primary-50 text-primary-600 rounded-xl flex-shrink-0 mt-1">
                       <ShieldCheck className="h-5 w-5" />
                     </div>
                     <div>
@@ -408,7 +408,7 @@ const Services = () => {
         <section className="bg-slate-50 py-12 md:py-20 border-t border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative bg-[#0B1528] rounded-3xl p-8 sm:p-12 md:p-16 text-center border border-slate-800 shadow-2xl overflow-hidden">
-              <div className="absolute top-[-50%] left-[-20%] w-[60%] h-[200%] bg-blue-600 rounded-full blur-[140px] opacity-20 pointer-events-none" />
+              <div className="absolute top-[-50%] left-[-20%] w-[60%] h-[200%] bg-primary-600 rounded-full blur-[140px] opacity-20 pointer-events-none" />
               <div className="absolute bottom-[-50%] right-[-20%] w-[60%] h-[200%] bg-cyan-500 rounded-full blur-[140px] opacity-15 pointer-events-none" />
 
               <FadeIn direction="up" className="relative z-10 max-w-3xl mx-auto">
@@ -419,7 +419,7 @@ const Services = () => {
                   Join thousands of businesses that trust iKart Express for their daily operations. Get a custom quote tailored to your business volume.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <a href="/contact" className="inline-flex items-center justify-center bg-[#FFB800] hover:bg-[#E5A500] text-slate-900 font-extrabold py-3.5 px-8 rounded-xl transition-all duration-200 shadow-lg shadow-[#FFB800]/15 text-sm">
+                  <a href="/contact" className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white font-extrabold py-3.5 px-8 rounded-xl transition-all duration-200 shadow-lg shadow-primary-600/15 text-sm">
                     Contact Sales Team
                   </a>
                   <a href="/contact" className="inline-flex items-center justify-center border border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-white font-extrabold py-3.5 px-8 rounded-xl transition-all duration-200 bg-slate-950/30 backdrop-blur-sm text-sm">

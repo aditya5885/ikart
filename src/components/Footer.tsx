@@ -23,7 +23,7 @@ const Footer = () => {
                                 href="https://twitter.com"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="p-2 bg-slate-900 hover:bg-blue-600 hover:text-white rounded-lg text-slate-400 transition-all"
+                                className="p-2 bg-slate-900 hover:bg-primary-600 hover:text-white rounded-lg text-slate-400 transition-all"
                                 aria-label="Twitter"
                             >
                                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
@@ -34,7 +34,7 @@ const Footer = () => {
                                 href="https://linkedin.com"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="p-2 bg-slate-900 hover:bg-blue-600 hover:text-white rounded-lg text-slate-400 transition-all"
+                                className="p-2 bg-slate-900 hover:bg-primary-600 hover:text-white rounded-lg text-slate-400 transition-all"
                                 aria-label="LinkedIn"
                             >
                                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
@@ -108,17 +108,17 @@ const Footer = () => {
                             Contact
                         </h3>
                         <div className="flex items-start gap-2">
-                            <MapPin className="h-4 w-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                            <MapPin className="h-4 w-4 text-primary-500 flex-shrink-0 mt-0.5" />
                         <span>Panangad Nilam, Muppathadam,<br />Muppathadam - 683110, Kerala</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <Phone className="h-4 w-4 text-blue-500 flex-shrink-0" />
+                            <Phone className="h-4 w-4 text-primary-500 flex-shrink-0" />
                             <a href="tel:+917306653758" className="hover:text-white transition-colors">
                                 +91 73066 53758
                             </a>
                         </div>
                         <div className="flex items-center gap-2">
-                            <Mail className="h-4 w-4 text-blue-500 flex-shrink-0" />
+                            <Mail className="h-4 w-4 text-primary-500 flex-shrink-0" />
                             <a href="mailto:enquiry@ikartexpress.com" className="hover:text-white transition-colors">
                                 enquiry@ikartexpress.com
                             </a>

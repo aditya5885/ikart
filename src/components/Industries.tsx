@@ -14,13 +14,13 @@ const Industries = () => {
         <FadeIn direction="up">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div className="max-w-2xl">
-              <span className="text-[10px] font-extrabold tracking-widest text-blue-600 uppercase block mb-3">
+              <span className="text-[10px] font-extrabold tracking-widest text-primary-600 uppercase block mb-3">
                 Specialized Verticals
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
                 Industries We Empower
               </h2>
-              <div className="w-10 h-1 bg-[#FFB800] rounded-full mb-4" />
+              <div className="w-10 h-1 bg-primary-500 rounded-full mb-4" />
               <p className="text-slate-500 text-sm md:text-base leading-relaxed">
                 Sector-specific logistics expertise that drives growth and operational efficiency.
               </p>
@@ -48,7 +48,7 @@ const Industries = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1528]/90 via-[#0B1528]/30 to-transparent" />
               <div className="relative z-10 p-7">
-                <div className="inline-flex items-center gap-2 bg-[#FFB800]/20 border border-[#FFB800]/30 text-[#FFB800] text-[9px] font-extrabold tracking-widest uppercase px-2.5 py-1 rounded-full mb-4">
+                <div className="inline-flex items-center gap-2 bg-primary-500/20 border border-primary-400/30 text-primary-300 text-[9px] font-extrabold tracking-widest uppercase px-2.5 py-1 rounded-full mb-4">
                   <ShoppingCart className="h-3 w-3" /> E-commerce
                 </div>
                 <h3 className="text-2xl font-extrabold text-white mb-2">Last-mile <br />Excellence</h3>
@@ -69,17 +69,17 @@ const Industries = () => {
           <div className="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
 
             {/* Healthcare — dark gradient */}
-            <div className="relative rounded-3xl overflow-hidden min-h-[180px] flex flex-col justify-end shadow-lg group cursor-pointer bg-gradient-to-br from-blue-900 to-[#002557]">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400/10 rounded-full -mr-12 -mt-12 pointer-events-none" />
+            <div className="relative rounded-3xl overflow-hidden min-h-[180px] flex flex-col justify-end shadow-lg group cursor-pointer bg-gradient-to-br from-primary-900 to-[#002557]">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary-400/10 rounded-full -mr-12 -mt-12 pointer-events-none" />
               <div className="relative z-10 p-6">
                 <div className="p-2.5 bg-white/10 rounded-xl w-fit mb-4">
-                  <HeartPulse className="h-5 w-5 text-[#FFB800]" />
+                  <HeartPulse className="h-5 w-5 text-primary-300" />
                 </div>
                 <h3 className="text-base font-extrabold text-white mb-1">Healthcare</h3>
                 <p className="text-white/60 text-xs leading-relaxed mb-3">
                   Cold-chain pharma with 100% temperature integrity.
                 </p>
-                <span className="text-[9px] font-bold text-[#FFB800] bg-[#FFB800]/10 px-2.5 py-1 rounded-full">
+                <span className="text-[9px] font-bold text-primary-300 bg-primary-500/10 px-2.5 py-1 rounded-full">
                   100% Temp Controlled
                 </span>
               </div>
@@ -94,7 +94,7 @@ const Industries = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
               <div className="relative z-10 p-6">
-                <Factory className="h-4 w-4 text-[#FFB800] mb-3" />
+                <Factory className="h-4 w-4 text-primary-300 mb-3" />
                 <h3 className="text-base font-extrabold text-white mb-1">Manufacturing</h3>
                 <span className="text-[9px] font-bold text-white/60 bg-white/10 px-2.5 py-1 rounded-full">
                   FTL · LTL · ODC
@@ -111,7 +111,7 @@ const Industries = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
               <div className="relative z-10 p-6">
-                <Store className="h-4 w-4 text-[#FFB800] mb-3" />
+                <Store className="h-4 w-4 text-primary-300 mb-3" />
                 <h3 className="text-base font-extrabold text-white mb-1">Retail Chain</h3>
                 <span className="text-[9px] font-bold text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded-full">
                   99.1% Fill Rate
@@ -120,10 +120,10 @@ const Industries = () => {
             </div>
 
             {/* FMCG — amber light card */}
-            <div className="rounded-3xl bg-gradient-to-br from-amber-50 to-yellow-50 border border-amber-200/50 min-h-[180px] flex flex-col justify-between p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+            <div className="rounded-3xl bg-gradient-to-br from-amber-50 to-cyan-50 border border-amber-200/50 min-h-[180px] flex flex-col justify-between p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
               <div>
-                <div className="p-2.5 bg-[#FFB800]/20 rounded-xl w-fit mb-4">
-                  <Package className="h-5 w-5 text-[#FFB800]" />
+                <div className="p-2.5 bg-primary-500/20 rounded-xl w-fit mb-4">
+                  <Package className="h-5 w-5 text-primary-300" />
                 </div>
                 <h3 className="text-base font-extrabold text-slate-900 mb-1">FMCG</h3>
                 <p className="text-slate-500 text-xs leading-relaxed">
@@ -149,8 +149,8 @@ const Industries = () => {
               <div className="relative z-10 p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 w-full">
                 <div>
                   <div className="inline-flex items-center gap-2 mb-3">
-                    <Briefcase className="h-4 w-4 text-[#FFB800]" />
-                    <span className="text-[9px] font-extrabold tracking-widest text-[#FFB800] uppercase">Enterprise</span>
+                    <Briefcase className="h-4 w-4 text-primary-300" />
+                    <span className="text-[9px] font-extrabold tracking-widest text-primary-300 uppercase">Enterprise</span>
                   </div>
                   <h3 className="text-2xl font-extrabold text-white mb-2">Corporate Partnerships</h3>
                   <p className="text-white/60 text-sm max-w-md leading-relaxed">
@@ -159,7 +159,7 @@ const Industries = () => {
                 </div>
                 <a
                   href="/industries"
-                  className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#FFB800] hover:bg-[#E5A500] text-[#0B1528] font-extrabold text-sm rounded-xl transition-all duration-200 shadow-lg"
+                  className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-extrabold text-sm rounded-xl transition-all duration-200 shadow-lg"
                 >
                   Learn More <ArrowRight className="h-4 w-4" />
                 </a>

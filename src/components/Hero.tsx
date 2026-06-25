@@ -13,15 +13,15 @@ const Hero = () => {
       {/* Layered dark overlay — keeps image visible but text readable */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B1528]/80 via-[#0B1528]/65 to-[#0B1528]/90" />
       {/* Subtle blue glow accents on top */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#FFB800]/8 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-600/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-primary-500/8 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         {/* Title */}
         <FadeIn direction="up" delay={0.1}>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
             Moving Businesses Forward <br />
-            Across <span className="text-[#FFB800]">Kerala & India</span>
+            Across <span className="text-primary-300">Kerala & India</span>
           </h1>
         </FadeIn>
 
@@ -51,7 +51,7 @@ const Hero = () => {
               <input
                 type="text"
                 placeholder="Enter Origin"
-                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
                 required
               />
             </div>
@@ -64,7 +64,7 @@ const Hero = () => {
               <input
                 type="text"
                 placeholder="Enter Destination"
-                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
                 required
               />
             </div>
@@ -74,7 +74,7 @@ const Hero = () => {
               <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
                 SERVICE
               </label>
-              <select className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all cursor-pointer">
+              <select className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer">
                 <option value="express">Express Parcel</option>
                 <option value="cargo">Standard Cargo</option>
                 <option value="cold-chain">Cold Chain</option>
@@ -90,7 +90,7 @@ const Hero = () => {
               <input
                 type="text"
                 placeholder="Weight (kg)"
-                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
                 required
               />
             </div>
@@ -103,7 +103,7 @@ const Hero = () => {
               <input
                 type="text"
                 placeholder="Contact No"
-                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
                 required
               />
             </div>

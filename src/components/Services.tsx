@@ -45,13 +45,13 @@ const Services = () => {
       {/* Header */}
       <FadeIn direction="up">
         <div className="max-w-3xl mb-16">
-          <span className="inline-flex px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold">
+          <span className="inline-flex px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold">
             Logistics Solutions
           </span>
 
           <h2 className="mt-6 text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
             One Logistics Partner
-            <span className="block text-blue-600">
+            <span className="block text-primary-600">
               For Every Business Need
             </span>
           </h2>
@@ -67,7 +67,7 @@ const Services = () => {
       {/* Featured Card */}
       <FadeIn direction="up" delay={0.2}>
         <div className="relative overflow-hidden rounded-[32px] bg-[#0B1528] text-white p-10 md:p-14 mb-10">
-          <div className="absolute right-0 top-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute right-0 top-0 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl"></div>
 
           <div className="relative z-10 max-w-3xl">
             <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
@@ -102,8 +102,8 @@ const Services = () => {
 
           return (
             <FadeIn key={index} direction="up" delay={0.3 + index * 0.1}>
-              <div className="group bg-white rounded-3xl p-6 border border-slate-200 hover:border-blue-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full">
-                <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+              <div className="group bg-white rounded-3xl p-6 border border-slate-200 hover:border-primary-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full">
+                <div className="w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center text-primary-600 mb-6 group-hover:bg-primary-600 group-hover:text-white transition-all">
                   <Icon size={24} />
                 </div>
 
@@ -115,7 +115,7 @@ const Services = () => {
                   {service.desc}
                 </p>
 
-                <div className="flex items-center text-blue-600 font-semibold text-sm">
+                <div className="flex items-center text-primary-600 font-semibold text-sm">
                   Learn More
                   <ArrowRight
                     size={16}

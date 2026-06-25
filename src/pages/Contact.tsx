@@ -57,16 +57,16 @@ const Contact = () => {
             <FadeIn direction="up">
               <div className="max-w-3xl">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFB800]/20 border border-[#FFB800]/30 mb-6">
-                  <span className="w-2 h-2 rounded-full bg-[#FFB800] animate-pulse" />
-                  <span className="text-[10px] font-extrabold tracking-widest text-[#FFB800] uppercase">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/20 border border-primary-400/30 mb-6">
+                  <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse" />
+                  <span className="text-[10px] font-extrabold tracking-widest text-primary-300 uppercase">
                     Logistics Excellence
                   </span>
                 </div>
                 {/* Headline */}
                 <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
                   Get in Touch with our <br />
-                  <span className="text-[#FFB800]">Logistics Experts</span>
+                  <span className="text-primary-300">Logistics Experts</span>
                 </h1>
                 <p className="text-white/80 text-base sm:text-lg max-w-xl leading-relaxed">
                   Whether you are scaling regional operations or need personalized local
@@ -103,7 +103,7 @@ const Contact = () => {
                       value={form.fullName}
                       onChange={(e) => setForm({ ...form, fullName: e.target.value })}
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#002557] focus:border-[#002557] transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-primary-600 transition-all"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -116,7 +116,7 @@ const Contact = () => {
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#002557] focus:border-[#002557] transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-primary-600 transition-all"
                     />
                   </div>
                 </div>
@@ -133,7 +133,7 @@ const Contact = () => {
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       required
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#002557] focus:border-[#002557] transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-primary-600 transition-all"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -145,7 +145,7 @@ const Contact = () => {
                       placeholder="Enter Company"
                       value={form.company}
                       onChange={(e) => setForm({ ...form, company: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#002557] focus:border-[#002557] transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-primary-600 transition-all"
                     />
                   </div>
                 </div>
@@ -161,7 +161,7 @@ const Contact = () => {
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#002557] focus:border-[#002557] transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-primary-600 transition-all resize-none"
                   />
                 </div>
 
@@ -172,7 +172,7 @@ const Contact = () => {
                   className={`inline-flex items-center gap-2 px-10 py-4 rounded-xl font-extrabold text-sm shadow-lg transition-all duration-200 group
                     ${status === "sent"
                       ? "bg-emerald-500 text-white cursor-default"
-                      : "bg-[#002557] hover:bg-[#003a80] text-white"
+                      : "bg-primary-600 hover:bg-primary-700 text-white"
                     }`}
                 >
                   {status === "idle" && (
@@ -208,7 +208,7 @@ const Contact = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 pointer-events-none" />
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-white/10 rounded-xl flex-shrink-0">
-                    <Briefcase className="h-6 w-6 text-[#FFB800]" />
+                    <Briefcase className="h-6 w-6 text-primary-300" />
                   </div>
                   <div>
                     <h3 className="text-lg font-extrabold text-white mb-2">Sales & Partnerships</h3>
@@ -217,7 +217,7 @@ const Contact = () => {
                     </p>
                     <a
                       href="mailto:enquiry@ikartexpress.com"
-                      className="inline-flex items-center gap-1.5 text-[#FFB800] font-bold text-sm hover:underline"
+                      className="inline-flex items-center gap-1.5 text-primary-300 font-bold text-sm hover:underline"
                     >
                       <Mail className="h-3.5 w-3.5" />
                       enquiry@ikartexpress.com
@@ -229,7 +229,7 @@ const Contact = () => {
               {/* Customer Support */}
               <div className="bg-white p-8 rounded-3xl border border-slate-200/50 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-blue-50 rounded-xl flex-shrink-0">
+                  <div className="p-3 bg-primary-50 rounded-xl flex-shrink-0">
                     <Headphones className="h-6 w-6 text-[#002557]" />
                   </div>
                   <div>
@@ -240,14 +240,14 @@ const Contact = () => {
                     <div className="flex flex-col gap-2">
                       <a
                         href="tel:+917306653758"
-                        className="inline-flex items-center gap-2 text-[#002557] font-bold text-sm hover:text-blue-600 transition-colors"
+                        className="inline-flex items-center gap-2 text-[#002557] font-bold text-sm hover:text-primary-600 transition-colors"
                       >
                         <Phone className="h-3.5 w-3.5" />
                         +91 73066 53758
                       </a>
                       <a
                         href="mailto:enquiry@ikartexpress.com"
-                        className="inline-flex items-center gap-2 text-[#002557] font-bold text-sm hover:text-blue-600 transition-colors"
+                        className="inline-flex items-center gap-2 text-[#002557] font-bold text-sm hover:text-primary-600 transition-colors"
                       >
                         <Mail className="h-3.5 w-3.5" />
                         enquiry@ikartexpress.com
@@ -294,7 +294,7 @@ const Contact = () => {
                 {/* Overlay badge */}
                 <div className="absolute top-6 left-6">
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#002557]/90 border border-white/20 shadow-lg backdrop-blur-md">
-                    <Globe className="h-3.5 w-3.5 text-[#FFB800]" />
+                    <Globe className="h-3.5 w-3.5 text-primary-300" />
                     <span className="text-[10px] font-extrabold tracking-widest text-white uppercase">
                       Kerala Delivery Network
                     </span>
@@ -318,7 +318,7 @@ const Contact = () => {
                 <div className="space-y-7 border-t border-slate-200/60 pt-8">
                   {/* Address */}
                   <div className="flex items-start gap-4">
-                    <div className="p-2.5 bg-blue-50 rounded-xl flex-shrink-0">
+                    <div className="p-2.5 bg-primary-50 rounded-xl flex-shrink-0">
                       <MapPin className="h-5 w-5 text-[#002557]" />
                     </div>
                     <div>
@@ -331,7 +331,7 @@ const Contact = () => {
                   </div>
                   {/* Phone */}
                   <div className="flex items-start gap-4">
-                    <div className="p-2.5 bg-blue-50 rounded-xl flex-shrink-0">
+                    <div className="p-2.5 bg-primary-50 rounded-xl flex-shrink-0">
                       <Phone className="h-5 w-5 text-[#002557]" />
                     </div>
                     <div>

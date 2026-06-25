@@ -47,7 +47,7 @@ const About = () => {
       icon: Users,
       title: "Customer Obsession",
       desc: "Every shipment matters. We align our routing and operations to ensure maximum reliability and speed for our clients.",
-      color: "bg-blue-50 text-blue-600",
+      color: "bg-primary-50 text-primary-600",
     },
     {
       icon: Cpu,
@@ -78,12 +78,12 @@ const About = () => {
         {/* 1. Hero Header Section */}
         <section className="relative bg-[#0B1528] py-20 text-white overflow-hidden">
           {/* Ambient glows */}
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-600/10 rounded-full blur-[120px] pointer-events-none" />
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none" />
           
           <FadeIn direction="up" delay={0.2} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left z-10">
             {/* Established Badge */}
-            <span className="inline-block bg-amber-500/20 text-[#FFB800] border border-amber-500/30 text-[10px] font-extrabold tracking-widest px-3 py-1 rounded uppercase mb-6">
+            <span className="inline-block bg-amber-500/20 text-primary-300 border border-amber-500/30 text-[10px] font-extrabold tracking-widest px-3 py-1 rounded uppercase mb-6">
               ESTABLISHED 2018
             </span>
             {/* Headline */}
@@ -106,7 +106,7 @@ const About = () => {
               <FadeIn direction="right">
                 <div className="bg-white rounded-3xl border border-slate-100 p-8 sm:p-12 shadow-sm flex flex-col justify-between text-left transition-all duration-300 hover:shadow-md h-full">
                   <div>
-                    <div className="inline-flex items-center justify-center p-3.5 bg-blue-50 text-blue-600 rounded-2xl mb-6">
+                    <div className="inline-flex items-center justify-center p-3.5 bg-primary-50 text-primary-600 rounded-2xl mb-6">
                       <Rocket className="h-6 w-6" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-900 mb-4">
@@ -142,9 +142,9 @@ const About = () => {
               <FadeIn direction="left" delay={0.2}>
                 <div className="bg-[#0B1528] rounded-3xl p-8 sm:p-12 text-white flex flex-col justify-center text-left relative overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl h-full">
                   {/* Ambient glow inside vision */}
-                  <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-blue-600 rounded-full blur-[80px] opacity-25 pointer-events-none" />
+                  <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-primary-600 rounded-full blur-[80px] opacity-25 pointer-events-none" />
                   <div className="relative z-10">
-                    <div className="inline-flex items-center justify-center p-3.5 bg-yellow-500/10 text-[#FFB800] rounded-2xl mb-6 border border-yellow-500/20">
+                    <div className="inline-flex items-center justify-center p-3.5 bg-cyan-500/10 text-primary-300 rounded-2xl mb-6 border border-cyan-500/20">
                       <Eye className="h-6 w-6" />
                     </div>
                     <h2 className="text-2xl font-bold text-white mb-4">
@@ -168,7 +168,7 @@ const About = () => {
             {/* Headers */}
             <FadeIn direction="up">
               <div className="max-w-2xl mx-auto mb-16 text-center">
-                <span className="text-xs font-extrabold text-blue-600 tracking-widest uppercase mb-2 block">
+                <span className="text-xs font-extrabold text-primary-600 tracking-widest uppercase mb-2 block">
                   THE ENGINE ROOM
                 </span>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -196,7 +196,7 @@ const About = () => {
                     {/* Body Content */}
                     <div className="p-8 flex-grow flex flex-col justify-between">
                       <div>
-                        <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-200">
+                        <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary-600 transition-colors duration-200">
                           {card.title}
                         </h3>
                         <p className="text-slate-500 text-sm leading-relaxed mb-6">
@@ -242,14 +242,14 @@ const About = () => {
                   />
                   {/* Frosted floaters from design */}
                   <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md border border-slate-100 px-4 py-3 rounded-2xl shadow-lg flex items-center gap-2">
-                    <Building className="h-4 w-4 text-blue-600" />
+                    <Building className="h-4 w-4 text-primary-600" />
                     <div>
                       <span className="text-[9px] font-bold text-slate-400 block leading-none">HUB COVERAGE</span>
                       <span className="text-xs font-black text-slate-800">28 States</span>
                     </div>
                   </div>
                   <div className="absolute bottom-6 right-6 bg-[#0B1528]/95 border border-slate-800 text-white px-4 py-3 rounded-2xl shadow-lg flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-[#FFB800]" />
+                    <MapPin className="h-4 w-4 text-primary-300" />
                     <div>
                       <span className="text-[9px] font-bold text-slate-400 block leading-none">REACH</span>
                       <span className="text-xs font-black text-white">Tier 4 Cities</span>
@@ -356,7 +356,7 @@ const About = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 items-center justify-items-center">
               
               <div className="flex items-center gap-3.5 w-full max-w-[240px]">
-                <div className="p-2.5 bg-blue-50/70 border border-blue-100/50 text-blue-600 rounded-xl flex-shrink-0">
+                <div className="p-2.5 bg-primary-50/70 border border-primary-100/50 text-primary-600 rounded-xl flex-shrink-0">
                   <Award className="h-6 w-6 stroke-[2]" />
                 </div>
                 <div className="text-left">
@@ -366,7 +366,7 @@ const About = () => {
               </div>
 
               <div className="flex items-center gap-3.5 w-full max-w-[240px]">
-                <div className="p-2.5 bg-blue-50/70 border border-blue-100/50 text-blue-600 rounded-xl flex-shrink-0">
+                <div className="p-2.5 bg-primary-50/70 border border-primary-100/50 text-primary-600 rounded-xl flex-shrink-0">
                   <ShieldCheck className="h-6 w-6 stroke-[2]" />
                 </div>
                 <div className="text-left">
@@ -376,7 +376,7 @@ const About = () => {
               </div>
 
               <div className="flex items-center gap-3.5 w-full max-w-[240px]">
-                <div className="p-2.5 bg-blue-50/70 border border-blue-100/50 text-blue-600 rounded-xl flex-shrink-0">
+                <div className="p-2.5 bg-primary-50/70 border border-primary-100/50 text-primary-600 rounded-xl flex-shrink-0">
                   <Leaf className="h-6 w-6 stroke-[2]" />
                 </div>
                 <div className="text-left">
@@ -386,7 +386,7 @@ const About = () => {
               </div>
 
               <div className="flex items-center gap-3.5 w-full max-w-[240px]">
-                <div className="p-2.5 bg-blue-50/70 border border-blue-100/50 text-blue-600 rounded-xl flex-shrink-0">
+                <div className="p-2.5 bg-primary-50/70 border border-primary-100/50 text-primary-600 rounded-xl flex-shrink-0">
                   <Globe className="h-6 w-6 stroke-[2]" />
                 </div>
                 <div className="text-left">

@@ -15,21 +15,21 @@ const features = [
     title: "Secure Handling",
     desc: "State-of-the-art facilities with specialized handling for fragile and high-value items.",
     stat: "100% Insured",
-    statColor: "text-[#FFB800]",
+    statColor: "text-primary-300",
   },
   {
     icon: Truck,
     title: "75k+ Vehicle Network",
     desc: "Extensive nationwide reach across 15,425+ pin codes with multi-modal transport.",
     stat: "15,425+ Pincodes",
-    statColor: "text-blue-400",
+    statColor: "text-primary-400",
   },
   {
     icon: PhoneCall,
     title: "24/7/365 Support",
     desc: "Round-the-clock dedicated customer assistance for every logistics partnership.",
     stat: "< 2 Min Response",
-    statColor: "text-[#FFB800]",
+    statColor: "text-primary-300",
   },
 ];
 
@@ -37,21 +37,21 @@ const Infrastructure = () => {
   return (
     <section className="bg-[#0B1528] py-24 text-white overflow-hidden relative">
       {/* Ambient glows */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/8 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FFB800]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-600/8 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* ── Left: Text & Features ── */}
           <FadeIn direction="right" className="text-left order-2 lg:order-1">
-            <span className="text-[10px] font-extrabold tracking-widest text-[#FFB800] uppercase block mb-4">
+            <span className="text-[10px] font-extrabold tracking-widest text-primary-300 uppercase block mb-4">
               Operational Excellence
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white leading-tight mb-4">
               Unrivaled Infrastructure <br className="hidden sm:inline" />
               for{" "}
-              <span className="text-[#FFB800]">Absolute Reliability</span>
+              <span className="text-primary-300">Absolute Reliability</span>
             </h2>
             <p className="text-slate-400 text-sm leading-relaxed mb-10 max-w-lg">
               Backed by proprietary technology and a vast physical network, we deliver with
@@ -69,7 +69,7 @@ const Infrastructure = () => {
                   >
                     <div className="flex items-start justify-between">
                       <div className="p-2.5 bg-white/5 border border-white/10 rounded-xl">
-                        <Icon className="h-5 w-5 text-[#FFB800]" />
+                        <Icon className="h-5 w-5 text-primary-300" />
                       </div>
                       <span className={`text-[9px] font-extrabold tracking-wider uppercase ${f.statColor}`}>
                         {f.stat}
@@ -85,12 +85,12 @@ const Infrastructure = () => {
             </div>
 
             {/* Tech callout */}
-            <div className="bg-gradient-to-r from-blue-900/40 to-[#002557]/40 border border-blue-800/40 rounded-2xl p-5 flex items-start gap-4">
-              <div className="p-3 bg-[#FFB800]/15 rounded-xl flex-shrink-0">
-                <Cpu className="h-5 w-5 text-[#FFB800]" />
+            <div className="bg-gradient-to-r from-primary-900/40 to-[#002557]/40 border border-primary-800/40 rounded-2xl p-5 flex items-start gap-4">
+              <div className="p-3 bg-primary-500/15 rounded-xl flex-shrink-0">
+                <Cpu className="h-5 w-5 text-primary-300" />
               </div>
               <div>
-                <h4 className="text-sm font-extrabold text-[#FFB800] mb-1">
+                <h4 className="text-sm font-extrabold text-primary-300 mb-1">
                   AI-Powered Route Optimization
                 </h4>
                 <p className="text-xs text-slate-300 leading-relaxed">
@@ -105,7 +105,7 @@ const Infrastructure = () => {
           {/* ── Right: Control Room Image ── */}
           <FadeIn direction="left" delay={0.3} className="relative order-1 lg:order-2 group">
             {/* Glow frame */}
-            <div className="absolute -inset-[2px] bg-gradient-to-br from-blue-600/40 via-[#FFB800]/20 to-transparent rounded-3xl blur-sm pointer-events-none opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
+            <div className="absolute -inset-[2px] bg-gradient-to-br from-primary-600/40 via-primary-400/20 to-transparent rounded-3xl blur-sm pointer-events-none opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
 
             <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
               <img
@@ -129,7 +129,7 @@ const Infrastructure = () => {
                     { val: "24/7", label: "Ops" },
                   ].map((s) => (
                     <div key={s.label} className="text-center">
-                      <span className="block text-lg font-black text-[#FFB800] leading-none">{s.val}</span>
+                      <span className="block text-lg font-black text-primary-300 leading-none">{s.val}</span>
                       <span className="text-[9px] font-bold text-white/50 tracking-widest uppercase">{s.label}</span>
                     </div>
                   ))}

@@ -9,7 +9,7 @@ const testimonials = [
     company: "Retail Hub",
     initials: "VK",
     rating: 5,
-    color: "from-blue-600 to-blue-800",
+    color: "from-primary-600 to-primary-800",
   },
   {
     text: "From warehousing to last-mile delivery, their logistics solutions have streamlined our supply chain and reduced operational overhead by over 30%. An outstanding partner.",
@@ -47,14 +47,14 @@ const Testimonials = () => {
         <FadeIn direction="up">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
             <div>
-              <span className="text-[10px] font-extrabold tracking-widest text-blue-600 uppercase block mb-3">
+              <span className="text-[10px] font-extrabold tracking-widest text-primary-600 uppercase block mb-3">
                 Client Success Stories
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
                 Trusted By Businesses{" "}
                 <span className="text-[#002557]">Across Kerala</span>
               </h2>
-              <div className="w-10 h-1 bg-[#FFB800] rounded-full" />
+              <div className="w-10 h-1 bg-primary-500 rounded-full" />
             </div>
             <p className="text-slate-500 text-sm max-w-sm leading-relaxed md:text-right">
               Reliable logistics, warehousing, and supply chain solutions that help
@@ -92,7 +92,7 @@ const Testimonials = () => {
                   {/* Stars */}
                   <div className="flex gap-1 mb-5">
                     {[...Array(item.rating)].map((_, k) => (
-                      <Star key={k} className="h-4 w-4 fill-[#FFB800] text-[#FFB800]" />
+                      <Star key={k} className="h-4 w-4 fill-[#eb94de] text-primary-300" />
                     ))}
                   </div>
 
@@ -111,7 +111,7 @@ const Testimonials = () => {
                     <div>
                       <span className="block font-extrabold text-slate-900 text-sm">{item.name}</span>
                       <span className="block text-xs text-slate-500 font-medium">{item.role}</span>
-                      <span className="block text-[10px] font-bold text-blue-600 tracking-wide uppercase mt-0.5">
+                      <span className="block text-[10px] font-bold text-primary-600 tracking-wide uppercase mt-0.5">
                         {item.company}
                       </span>
                     </div>
