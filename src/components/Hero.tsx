@@ -1,4 +1,4 @@
-import heroBg from "../assets/ind_hero_bg.png";
+import heroBg from "../assets/hero.jpg";
 import FadeIn from "./FadeIn";
 
 const Hero = () => {
@@ -34,86 +34,86 @@ const Hero = () => {
 
         {/* Frosted Glass Availability Form */}
         <FadeIn direction="up" delay={0.3}>
-          <form 
-            onSubmit={(e) => { 
-              e.preventDefault(); 
-              window.location.href = "/contact"; 
-            }} 
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              window.location.href = "/contact";
+            }}
             className="max-w-6xl mx-auto bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-white/20 shadow-2xl mb-12 text-left"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4 items-end">
-            
-            {/* Pickup */}
-            <div>
-              <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
-                PICKUP
-              </label>
-              <input
-                type="text"
-                placeholder="Enter Origin"
-                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
-                required
-              />
-            </div>
 
-            {/* Delivery */}
-            <div>
-              <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
-                DELIVERY
-              </label>
-              <input
-                type="text"
-                placeholder="Enter Destination"
-                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
-                required
-              />
-            </div>
+              {/* Pickup */}
+              <div>
+                <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
+                  PICKUP
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Origin"
+                  className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
+                  required
+                />
+              </div>
 
-            {/* Service */}
-            <div>
-              <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
-                SERVICE
-              </label>
-              <select className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer">
-                <option value="express">Express Parcel</option>
-                <option value="cargo">Standard Cargo</option>
-                <option value="cold-chain">Cold Chain</option>
-                <option value="warehousing">Warehousing</option>
-              </select>
-            </div>
+              {/* Delivery */}
+              <div>
+                <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
+                  DELIVERY
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Destination"
+                  className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
+                  required
+                />
+              </div>
 
-            {/* Shipment */}
-            <div>
-              <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
-                SHIPMENT
-              </label>
-              <input
-                type="text"
-                placeholder="Weight (kg)"
-                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
-                required
-              />
-            </div>
+              {/* Service */}
+              <div>
+                <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
+                  SERVICE
+                </label>
+                <select className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer">
+                  <option value="express">Express Parcel</option>
+                  <option value="cargo">Standard Cargo</option>
+                  <option value="cold-chain">Cold Chain</option>
+                  <option value="warehousing">Warehousing</option>
+                </select>
+              </div>
 
-            {/* Phone */}
-            <div>
-              <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
-                PHONE
-              </label>
-              <input
-                type="text"
-                placeholder="Contact No"
-                className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
-                required
-              />
-            </div>
+              {/* Shipment */}
+              <div>
+                <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
+                  SHIPMENT
+                </label>
+                <input
+                  type="text"
+                  placeholder="Weight (kg)"
+                  className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
+                  required
+                />
+              </div>
 
-            {/* Button */}
-            <div>
-              <button type="submit" className="w-full h-11 bg-[#0A1D37] hover:bg-[#030E1C] text-white font-extrabold text-sm rounded-xl transition-colors duration-200 shadow-md flex items-center justify-center">
-                Get Quote
-              </button>
-            </div>
+              {/* Phone */}
+              <div>
+                <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
+                  PHONE
+                </label>
+                <input
+                  type="text"
+                  placeholder="Contact No"
+                  className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
+                  required
+                />
+              </div>
+
+              {/* Button */}
+              <div>
+                <button type="submit" className="w-full h-11 bg-[#0A1D37] hover:bg-[#030E1C] text-white font-extrabold text-sm rounded-xl transition-colors duration-200 shadow-md flex items-center justify-center">
+                  Get Quote
+                </button>
+              </div>
 
             </div>
           </form>
