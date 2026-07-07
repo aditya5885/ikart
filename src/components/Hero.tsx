@@ -1,7 +1,16 @@
-import heroBg from "../assets/hero.jpg";
+import { useState } from "react";
+import heroBg from "../assets/covered_van_hero.png";
 import FadeIn from "./FadeIn";
+import { Truck, Globe, Package } from "lucide-react";
 
 const Hero = () => {
+  const [activeTab, setActiveTab] = useState("international");
+
+  const tabs = [
+    { id: "international", label: "International Delivery", icon: Globe },
+    { id: "domestic", label: "Domestic Delivery", icon: Package },
+    { id: "goods", label: "Goods Transportation", icon: Truck },
+  ];
 
   return (
     <section id="home" className="relative bg-[#0B1528] pt-20 pb-20 md:pt-28 md:pb-28 overflow-hidden">
@@ -32,91 +41,134 @@ const Hero = () => {
           </p>
         </FadeIn>
 
-        {/* Frosted Glass Availability Form */}
+        {/* Frosted Glass Availability Form with Tabs */}
         <FadeIn direction="up" delay={0.3}>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              window.location.href = "/contact";
-            }}
-            className="max-w-6xl mx-auto bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-white/20 shadow-2xl mb-12 text-left"
-          >
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4 items-end">
-
-              {/* Pickup */}
-              <div>
-                <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
-                  PICKUP
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter Origin"
-                  className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
-                  required
-                />
-              </div>
-
-              {/* Delivery */}
-              <div>
-                <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
-                  DELIVERY
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter Destination"
-                  className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
-                  required
-                />
-              </div>
-
-              {/* Service */}
-              <div>
-                <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
-                  SERVICE
-                </label>
-                <select className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer">
-                  <option value="express">Express Parcel</option>
-                  <option value="cargo">Standard Cargo</option>
-                  <option value="cold-chain">Cold Chain</option>
-                  <option value="warehousing">Warehousing</option>
-                </select>
-              </div>
-
-              {/* Shipment */}
-              <div>
-                <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
-                  SHIPMENT
-                </label>
-                <input
-                  type="text"
-                  placeholder="Weight (kg)"
-                  className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
-                  required
-                />
-              </div>
-
-              {/* Phone */}
-              <div>
-                <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
-                  PHONE
-                </label>
-                <input
-                  type="text"
-                  placeholder="Contact No"
-                  className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
-                  required
-                />
-              </div>
-
-              {/* Button */}
-              <div>
-                <button type="submit" className="w-full h-11 bg-[#0A1D37] hover:bg-[#030E1C] text-white font-extrabold text-sm rounded-xl transition-colors duration-200 shadow-md flex items-center justify-center">
-                  Get Quote
-                </button>
-              </div>
-
+          <div className="max-w-6xl mx-auto relative mt-16 md:mt-20">
+            {/* Tab Switcher - Centered and Touching Form */}
+            <div className="absolute -top-[41px] left-1/2 -translate-x-1/2 inline-flex p-1 bg-white/80 backdrop-blur-md border border-white/20 border-b-0 rounded-t-2xl shadow-lg gap-1 max-w-[calc(100%-2rem)] overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden z-10">
+              {tabs.map((tab) => {
+                const isActive = activeTab === tab.id;
+                const Icon = tab.icon;
+                return (
+                  <button
+                    key={tab.id}
+                    type="button"
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`flex items-center gap-2 px-4 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold tracking-wide transition-all duration-300 whitespace-nowrap cursor-pointer ${
+                      isActive
+                        ? "bg-primary-500 text-white shadow-md shadow-primary-500/20 scale-[1.02]"
+                        : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/50"
+                    }`}
+                  >
+                    <Icon className="h-4 w-4" />
+                    {tab.label}
+                  </button>
+                );
+              })}
             </div>
-          </form>
+
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                window.location.href = "/contact";
+              }}
+              className="w-full bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-white/20 shadow-2xl mb-12 text-left"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4 items-end">
+
+                {/* Pickup */}
+                <div>
+                  <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
+                    PICKUP
+                  </label>
+                  <input
+                    type="text"
+                    placeholder={activeTab === "international" ? "Origin Country" : "Enter Origin"}
+                    className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
+                    required
+                  />
+                </div>
+
+                {/* Delivery */}
+                <div>
+                  <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
+                    DELIVERY
+                  </label>
+                  <input
+                    type="text"
+                    placeholder={activeTab === "international" ? "Destination Country" : "Enter Destination"}
+                    className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
+                    required
+                  />
+                </div>
+
+                {/* Service */}
+                <div>
+                  <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
+                    SERVICE
+                  </label>
+                  <select className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer">
+                    {activeTab === "international" && (
+                      <>
+                        <option value="air-freight">Air Freight</option>
+                        <option value="ocean-freight">Ocean Freight</option>
+                        <option value="intl-courier">International Courier</option>
+                      </>
+                    )}
+                    {activeTab === "domestic" && (
+                      <>
+                        <option value="express-parcel">Express Parcel</option>
+                        <option value="std-delivery">Standard Delivery</option>
+                        <option value="same-day">Same Day Delivery</option>
+                      </>
+                    )}
+                    {activeTab === "goods" && (
+                      <>
+                        <option value="cargo">Standard Cargo</option>
+                        <option value="ftl">Full Truckload (FTL)</option>
+                        <option value="ltl">Part Truckload (LTL)</option>
+                        <option value="cold-chain">Cold Chain</option>
+                      </>
+                    )}
+                  </select>
+                </div>
+
+                {/* Shipment */}
+                <div>
+                  <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
+                    SHIPMENT
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Weight (kg)"
+                    className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
+                    required
+                  />
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
+                    PHONE
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Contact No"
+                    className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
+                    required
+                  />
+                </div>
+
+                {/* Button */}
+                <div>
+                  <button type="submit" className="w-full h-11 bg-[#0A1D37] hover:bg-[#030E1C] text-white font-extrabold text-sm rounded-xl transition-colors duration-200 shadow-md flex items-center justify-center">
+                    Get Quote
+                  </button>
+                </div>
+
+              </div>
+            </form>
+          </div>
         </FadeIn>
 
       </div>
