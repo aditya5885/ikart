@@ -118,9 +118,9 @@ const Infrastructure = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1528]/60 via-transparent to-transparent" />
 
               {/* Floating stat strip */}
-              <div className="absolute bottom-0 left-0 right-0 p-5">
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-5">
                 <div
-                  className="flex items-center justify-around gap-4 rounded-2xl px-6 py-4"
+                  className="flex items-center justify-around gap-2 sm:gap-4 rounded-2xl px-3 sm:px-6 py-2.5 sm:py-4"
                   style={{ background: "rgba(7,13,25,0.75)", backdropFilter: "blur(16px)", border: "1px solid rgba(255,255,255,0.08)" }}
                 >
                   {[
@@ -129,13 +129,13 @@ const Infrastructure = () => {
                     { val: "24/7", label: "Ops" },
                   ].map((s) => (
                     <div key={s.label} className="text-center">
-                      <span className="block text-lg font-black text-primary-300 leading-none">{s.val}</span>
-                      <span className="text-[9px] font-bold text-white/50 tracking-widest uppercase">{s.label}</span>
+                      <span className="block text-sm sm:text-lg font-black text-primary-300 leading-none mb-0.5 sm:mb-1">{s.val}</span>
+                      <span className="text-[8px] sm:text-[9px] font-bold text-white/50 tracking-widest uppercase">{s.label}</span>
                     </div>
                   ))}
-                  <div className="flex items-center gap-1.5 ml-2">
-                    <CheckCircle className="h-4 w-4 text-emerald-400" />
-                    <span className="text-xs font-bold text-emerald-400">Live Ops</span>
+                  <div className="flex items-center gap-1 sm:gap-1.5 ml-1 sm:ml-2">
+                    <CheckCircle className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-emerald-400 flex-shrink-0" />
+                    <span className="text-[10px] sm:text-xs font-bold text-emerald-400 hidden sm:inline">Live Ops</span>
                   </div>
                 </div>
               </div>

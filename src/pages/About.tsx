@@ -353,7 +353,7 @@ const About = () => {
         {/* 6. Accreditation Certifications Row */}
         <section className="bg-white py-16 border-t border-slate-100">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 items-center justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 items-center justify-items-center">
               
               <div className="flex items-center gap-3.5 w-full max-w-[240px]">
                 <div className="p-2.5 bg-primary-50/70 border border-primary-100/50 text-primary-600 rounded-xl flex-shrink-0">
