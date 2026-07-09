@@ -259,11 +259,11 @@ const Contact = () => {
                       For corporate contracts, enterprise solutions, and large-scale logistics partnerships.
                     </p>
                     <a
-                      href="mailto:adityashvkmr@gmail.com"
+                      href="mailto:enquiry@ikartexpress.com"
                       className="inline-flex items-center gap-1.5 text-primary-300 font-bold text-sm hover:underline"
                     >
                       <Mail className="h-3.5 w-3.5" />
-                      adityashvkmr@gmail.com
+                      enquiry@ikartexpress.com
                     </a>
                   </div>
                 </div>
@@ -289,11 +289,11 @@ const Contact = () => {
                         +91 73066 53758
                       </a>
                       <a
-                        href="mailto:adityashvkmr@gmail.com"
+                        href="mailto:enquiry@ikartexpress.com"
                         className="inline-flex items-center gap-2 text-[#002557] font-bold text-sm hover:text-primary-600 transition-colors"
                       >
                         <Mail className="h-3.5 w-3.5" />
-                        adityashvkmr@gmail.com
+                        enquiry@ikartexpress.com
                       </a>
                     </div>
                   </div>
@@ -310,8 +310,8 @@ const Contact = () => {
                     <h3 className="text-lg font-extrabold text-slate-800 mb-2">Media & Careers</h3>
                     <p className="text-slate-500 text-sm mb-1">
                       Inquiries:{" "}
-                      <a href="mailto:adityashvkmr@gmail.com" className="font-semibold hover:text-slate-700 transition-colors">
-                        adityashvkmr@gmail.com
+                      <a href="mailto:enquiry@ikartexpress.com" className="font-semibold hover:text-slate-700 transition-colors">
+                        enquiry@ikartexpress.com
                       </a>
                     </p>
                   </div>
@@ -386,10 +386,10 @@ const Contact = () => {
                         +91 73066 53758
                       </a>
                       <a
-                        href="mailto:adityashvkmr@gmail.com"
+                        href="mailto:enquiry@ikartexpress.com"
                         className="text-slate-500 text-xs font-semibold hover:text-[#002557] transition-colors block"
                       >
-                        adityashvkmr@gmail.com
+                        enquiry@ikartexpress.com
                       </a>
                     </div>
                   </div>
