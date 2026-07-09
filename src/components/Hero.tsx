@@ -81,12 +81,34 @@ const Hero = () => {
                   <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
                     PICKUP
                   </label>
-                  <input
-                    type="text"
-                    placeholder={activeTab === "international" ? "Origin Country" : "Enter Origin"}
-                    className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
-                    required
-                  />
+                  {activeTab === "international" ? (
+                    <input
+                      type="text"
+                      placeholder="Origin Country"
+                      className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
+                      required
+                    />
+                  ) : (
+                    <select
+                      defaultValue="Ernakulam"
+                      className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer"
+                    >
+                      <option value="Ernakulam">Ernakulam</option>
+                      <option value="Alappuzha">Alappuzha</option>
+                      <option value="Idukki">Idukki</option>
+                      <option value="Kannur">Kannur</option>
+                      <option value="Kasaragod">Kasaragod</option>
+                      <option value="Kollam">Kollam</option>
+                      <option value="Kottayam">Kottayam</option>
+                      <option value="Kozhikode">Kozhikode</option>
+                      <option value="Malappuram">Malappuram</option>
+                      <option value="Palakkad">Palakkad</option>
+                      <option value="Pathanamthitta">Pathanamthitta</option>
+                      <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                      <option value="Thrissur">Thrissur</option>
+                      <option value="Wayanad">Wayanad</option>
+                    </select>
+                  )}
                 </div>
 
                 {/* Delivery */}
@@ -94,12 +116,33 @@ const Hero = () => {
                   <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
                     DELIVERY
                   </label>
-                  <input
-                    type="text"
-                    placeholder={activeTab === "international" ? "Destination Country" : "Enter Destination"}
-                    className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
-                    required
-                  />
+                  {activeTab === "international" ? (
+                    <input
+                      type="text"
+                      placeholder="Destination Country"
+                      className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
+                      required
+                    />
+                  ) : (
+                    <select
+                      className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer"
+                    >
+                      <option value="Ernakulam">Ernakulam</option>
+                      <option value="Alappuzha">Alappuzha</option>
+                      <option value="Idukki">Idukki</option>
+                      <option value="Kannur">Kannur</option>
+                      <option value="Kasaragod">Kasaragod</option>
+                      <option value="Kollam">Kollam</option>
+                      <option value="Kottayam">Kottayam</option>
+                      <option value="Kozhikode">Kozhikode</option>
+                      <option value="Malappuram">Malappuram</option>
+                      <option value="Palakkad">Palakkad</option>
+                      <option value="Pathanamthitta">Pathanamthitta</option>
+                      <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                      <option value="Thrissur">Thrissur</option>
+                      <option value="Wayanad">Wayanad</option>
+                    </select>
+                  )}
                 </div>
 
                 {/* Service */}
@@ -124,10 +167,7 @@ const Hero = () => {
                     )}
                     {activeTab === "goods" && (
                       <>
-                        <option value="cargo">Standard Cargo</option>
                         <option value="ftl">Full Truckload (FTL)</option>
-                        <option value="ltl">Part Truckload (LTL)</option>
-                        <option value="cold-chain">Cold Chain</option>
                       </>
                     )}
                   </select>
