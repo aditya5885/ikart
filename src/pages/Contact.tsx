@@ -18,7 +18,7 @@ import contactHeroImg from "../assets/contact_hero.png";
 import deliveryImg from "../assets/kerala_delivery.png";
 
 // TODO: Replace this with your actual Web3Forms access key from https://web3forms.com/
-const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+const WEB3FORMS_ACCESS_KEY = "1866ad8e-926f-47f6-b400-1e66fbb0d63b";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -32,10 +32,6 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (WEB3FORMS_ACCESS_KEY === "YOUR_WEB3FORMS_ACCESS_KEY") {
-      alert("Please configure your Web3Forms access key at the top of Contact.tsx");
-      return;
-    }
     setStatus("sending");
 
     try {

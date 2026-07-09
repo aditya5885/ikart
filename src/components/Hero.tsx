@@ -3,8 +3,57 @@ import heroBg from "../assets/covered_van_hero.png";
 import FadeIn from "./FadeIn";
 import { Truck, Globe, Package } from "lucide-react";
 
+const WEB3FORMS_ACCESS_KEY = "1866ad8e-926f-47f6-b400-1e66fbb0d63b";
+
 const Hero = () => {
   const [activeTab, setActiveTab] = useState("international");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    const formData = new FormData(e.currentTarget);
+    const pickup = formData.get("pickup");
+    const delivery = formData.get("delivery");
+    const service = formData.get("service");
+    const shipment = formData.get("shipment");
+    const phone = formData.get("phone");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Quote Request (${activeTab.toUpperCase()})`,
+          tab: activeTab,
+          pickup,
+          delivery,
+          service,
+          shipment_weight: shipment,
+          phone
+        })
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setStatus("sent");
+        e.currentTarget.reset();
+        setTimeout(() => setStatus("idle"), 3000);
+      } else {
+        setStatus("idle");
+        alert(data.message || "Failed to request quote. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("idle");
+      alert("An error occurred. Please check your connection and try again.");
+    }
+  };
 
   const tabs = [
     { id: "international", label: "International Delivery", icon: Globe },
@@ -68,10 +117,7 @@ const Hero = () => {
             </div>
 
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                window.location.href = "/contact";
-              }}
+              onSubmit={handleSubmit}
               className="w-full bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-white/20 shadow-2xl mb-12 text-left"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4 items-end">
@@ -84,12 +130,14 @@ const Hero = () => {
                   {activeTab === "international" ? (
                     <input
                       type="text"
+                      name="pickup"
                       placeholder="Origin Country"
                       className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
                       required
                     />
                   ) : (
                     <select
+                      name="pickup"
                       defaultValue="Ernakulam"
                       className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer"
                     >
@@ -119,12 +167,14 @@ const Hero = () => {
                   {activeTab === "international" ? (
                     <input
                       type="text"
+                      name="delivery"
                       placeholder="Destination Country"
                       className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
                       required
                     />
                   ) : (
                     <select
+                      name="delivery"
                       className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer"
                     >
                       <option value="Ernakulam">Ernakulam</option>
@@ -150,7 +200,10 @@ const Hero = () => {
                   <label className="text-[10px] tracking-wider text-slate-700 font-extrabold mb-1.5 block uppercase">
                     SERVICE
                   </label>
-                  <select className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer">
+                  <select
+                    name="service"
+                    className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer"
+                  >
                     {activeTab === "international" && (
                       <>
                         <option value="intl-courier">International Courier</option>
@@ -180,6 +233,7 @@ const Hero = () => {
                   </label>
                   <input
                     type="text"
+                    name="shipment"
                     placeholder="Weight (kg)"
                     className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
                     required
@@ -193,6 +247,7 @@ const Hero = () => {
                   </label>
                   <input
                     type="text"
+                    name="phone"
                     placeholder="Contact No"
                     className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm placeholder-slate-400 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
                     required
@@ -201,8 +256,26 @@ const Hero = () => {
 
                 {/* Button */}
                 <div>
-                  <button type="submit" className="w-full h-11 bg-[#0A1D37] hover:bg-[#030E1C] text-white font-extrabold text-sm rounded-xl transition-colors duration-200 shadow-md flex items-center justify-center">
-                    Get Quote
+                  <button
+                    type="submit"
+                    disabled={status !== "idle"}
+                    className={`w-full h-11 font-extrabold text-sm rounded-xl transition-all duration-200 shadow-md flex items-center justify-center cursor-pointer ${
+                      status === "sent"
+                        ? "bg-emerald-500 text-white cursor-default"
+                        : "bg-[#0A1D37] hover:bg-[#030E1C] text-white"
+                    }`}
+                  >
+                    {status === "idle" && "Get Quote"}
+                    {status === "sending" && (
+                      <span className="flex items-center gap-1.5 justify-center">
+                        <svg className="h-4 w-4 animate-spin text-white" viewBox="0 0 24 24" fill="none">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                        </svg>
+                        Sending...
+                      </span>
+                    )}
+                    {status === "sent" && "Quote Requested!"}
                   </button>
                 </div>
 
