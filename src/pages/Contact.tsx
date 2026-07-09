@@ -27,14 +27,37 @@ const Contact = () => {
   });
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    setTimeout(() => {
-      setStatus("sent");
-      setForm({ fullName: "", email: "", phone: "", company: "", message: "" });
-      setTimeout(() => setStatus("idle"), 3000);
-    }, 1500);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/adityashvkmr@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: form.fullName,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          message: form.message
+        })
+      });
+      if (response.ok) {
+        setStatus("sent");
+        setForm({ fullName: "", email: "", phone: "", company: "", message: "" });
+        setTimeout(() => setStatus("idle"), 3000);
+      } else {
+        setStatus("idle");
+        alert("Submission failed. Please try again or email us directly.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("idle");
+      alert("Submission failed. Please try again or email us directly.");
+    }
   };
 
   return (
@@ -216,11 +239,11 @@ const Contact = () => {
                       For corporate contracts, enterprise solutions, and large-scale logistics partnerships.
                     </p>
                     <a
-                      href="mailto:enquiry@ikartexpress.com"
+                      href="mailto:adityashvkmr@gmail.com"
                       className="inline-flex items-center gap-1.5 text-primary-300 font-bold text-sm hover:underline"
                     >
                       <Mail className="h-3.5 w-3.5" />
-                      enquiry@ikartexpress.com
+                      adityashvkmr@gmail.com
                     </a>
                   </div>
                 </div>
@@ -246,11 +269,11 @@ const Contact = () => {
                         +91 73066 53758
                       </a>
                       <a
-                        href="mailto:enquiry@ikartexpress.com"
+                        href="mailto:adityashvkmr@gmail.com"
                         className="inline-flex items-center gap-2 text-[#002557] font-bold text-sm hover:text-primary-600 transition-colors"
                       >
                         <Mail className="h-3.5 w-3.5" />
-                        enquiry@ikartexpress.com
+                        adityashvkmr@gmail.com
                       </a>
                     </div>
                   </div>
@@ -267,8 +290,8 @@ const Contact = () => {
                     <h3 className="text-lg font-extrabold text-slate-800 mb-2">Media & Careers</h3>
                     <p className="text-slate-500 text-sm mb-1">
                       Inquiries:{" "}
-                      <a href="mailto:enquiry@ikartexpress.com" className="font-semibold hover:text-slate-700 transition-colors">
-                        enquiry@ikartexpress.com
+                      <a href="mailto:adityashvkmr@gmail.com" className="font-semibold hover:text-slate-700 transition-colors">
+                        adityashvkmr@gmail.com
                       </a>
                     </p>
                   </div>
@@ -343,10 +366,10 @@ const Contact = () => {
                         +91 73066 53758
                       </a>
                       <a
-                        href="mailto:enquiry@ikartexpress.com"
+                        href="mailto:adityashvkmr@gmail.com"
                         className="text-slate-500 text-xs font-semibold hover:text-[#002557] transition-colors block"
                       >
-                        enquiry@ikartexpress.com
+                        adityashvkmr@gmail.com
                       </a>
                     </div>
                   </div>
