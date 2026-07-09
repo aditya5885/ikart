@@ -39,19 +39,27 @@ const Hero = () => {
         })
       });
 
-      const data = await response.json();
-      if (data.success) {
+      let data;
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        throw new Error(`Server returned non-JSON response: ${text.substring(0, 100)}`);
+      }
+
+      if (data && data.success) {
         setStatus("sent");
         e.currentTarget.reset();
         setTimeout(() => setStatus("idle"), 3000);
       } else {
         setStatus("idle");
-        alert(data.message || "Failed to request quote. Please try again.");
+        alert((data && data.message) || "Failed to request quote. Please try again.");
       }
-    } catch (error) {
-      console.error(error);
+    } catch (error: any) {
+      console.error("Submission error:", error);
       setStatus("idle");
-      alert("An error occurred. Please check your connection and try again.");
+      alert(`Submission error: ${error.message || error}`);
     }
   };
 
