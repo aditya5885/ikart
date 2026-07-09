@@ -3,7 +3,7 @@ import heroBg from "../assets/covered_van_hero.png";
 import FadeIn from "./FadeIn";
 import { Truck, Globe, Package } from "lucide-react";
 
-const WEB3FORMS_ACCESS_KEY = "1866ad8e-926f-47f6-b400-1e66fbb0d63b";
+const WEB3FORMS_ACCESS_KEY = "4f046474-125f-4419-9535-84f63def220b";
 
 const Hero = () => {
   const [activeTab, setActiveTab] = useState("international");

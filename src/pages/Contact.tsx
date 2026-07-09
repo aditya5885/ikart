@@ -18,7 +18,7 @@ import contactHeroImg from "../assets/contact_hero.png";
 import deliveryImg from "../assets/kerala_delivery.png";
 
 // TODO: Replace this with your actual Web3Forms access key from https://web3forms.com/
-const WEB3FORMS_ACCESS_KEY = "1866ad8e-926f-47f6-b400-1e66fbb0d63b";
+const WEB3FORMS_ACCESS_KEY = "4f046474-125f-4419-9535-84f63def220b";
 
 const Contact = () => {
   const [form, setForm] = useState({
