@@ -12,9 +12,13 @@ import {
   Send,
   Globe,
   Share2,
+  CheckCircle,
 } from "lucide-react";
 import contactHeroImg from "../assets/contact_hero.png";
 import deliveryImg from "../assets/kerala_delivery.png";
+
+// TODO: Replace this with your actual Web3Forms access key from https://web3forms.com/
+const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -24,6 +28,48 @@ const Contact = () => {
     company: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (WEB3FORMS_ACCESS_KEY === "YOUR_WEB3FORMS_ACCESS_KEY") {
+      alert("Please configure your Web3Forms access key at the top of Contact.tsx");
+      return;
+    }
+    setStatus("sending");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: form.fullName,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          message: form.message
+        })
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setStatus("sent");
+        setForm({ fullName: "", email: "", phone: "", company: "", message: "" });
+        setTimeout(() => setStatus("idle"), 3000);
+      } else {
+        setStatus("idle");
+        alert(data.message || "Submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("idle");
+      alert("An error occurred. Please check your connection and try again.");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans antialiased text-slate-800 overflow-x-hidden">
@@ -78,11 +124,7 @@ const Contact = () => {
                 Fill out the form below and an industry specialist will contact you shortly.
               </p>
 
-              <form action="https://formsubmit.co/adityashvkmr@gmail.com" method="POST" className="space-y-6">
-                {/* Configuration */}
-                <input type="hidden" name="_next" value={window.location.href} />
-                <input type="hidden" name="_subject" value="New Inquiry from iKart Express" />
-
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Row 1 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-1.5">
@@ -165,10 +207,34 @@ const Contact = () => {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 px-10 py-4 rounded-xl font-extrabold text-sm shadow-lg transition-all duration-200 group bg-primary-600 hover:bg-primary-700 text-white"
+                  disabled={status !== "idle"}
+                  className={`inline-flex items-center gap-2 px-10 py-4 rounded-xl font-extrabold text-sm shadow-lg transition-all duration-200 group
+                    ${status === "sent"
+                      ? "bg-emerald-500 text-white cursor-default"
+                      : "bg-primary-600 hover:bg-primary-700 text-white"
+                    }`}
                 >
-                  Send Inquiry
-                  <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  {status === "idle" && (
+                    <>
+                      Send Inquiry
+                      <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
+                  {status === "sending" && (
+                    <>
+                      <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                      </svg>
+                      Sending...
+                    </>
+                  )}
+                  {status === "sent" && (
+                    <>
+                      <CheckCircle className="h-4 w-4" />
+                      Message Sent!
+                    </>
+                  )}
                 </button>
               </form>
             </FadeIn>
