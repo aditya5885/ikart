@@ -11,9 +11,10 @@ const Hero = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formElement = e.currentTarget;
     setStatus("sending");
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(formElement);
     const pickup = formData.get("pickup");
     const delivery = formData.get("delivery");
     const service = formData.get("service");
@@ -50,7 +51,7 @@ const Hero = () => {
 
       if (data && data.success) {
         setStatus("sent");
-        e.currentTarget.reset();
+        formElement.reset();
         setTimeout(() => setStatus("idle"), 3000);
       } else {
         setStatus("idle");
