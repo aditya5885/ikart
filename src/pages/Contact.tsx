@@ -10,7 +10,6 @@ import {
   Phone,
   Mail,
   Send,
-  CheckCircle,
   Globe,
   Share2,
 } from "lucide-react";
@@ -25,40 +24,6 @@ const Contact = () => {
     company: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("sending");
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/adityashvkmr@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          name: form.fullName,
-          email: form.email,
-          phone: form.phone,
-          company: form.company,
-          message: form.message
-        })
-      });
-      if (response.ok) {
-        setStatus("sent");
-        setForm({ fullName: "", email: "", phone: "", company: "", message: "" });
-        setTimeout(() => setStatus("idle"), 3000);
-      } else {
-        setStatus("idle");
-        alert("Submission failed. Please try again or email us directly.");
-      }
-    } catch (error) {
-      console.error(error);
-      setStatus("idle");
-      alert("Submission failed. Please try again or email us directly.");
-    }
-  };
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans antialiased text-slate-800 overflow-x-hidden">
@@ -113,7 +78,11 @@ const Contact = () => {
                 Fill out the form below and an industry specialist will contact you shortly.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form action="https://formsubmit.co/adityashvkmr@gmail.com" method="POST" className="space-y-6">
+                {/* Configuration */}
+                <input type="hidden" name="_next" value={window.location.href} />
+                <input type="hidden" name="_subject" value="New Inquiry from iKart Express" />
+
                 {/* Row 1 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-1.5">
@@ -122,6 +91,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
+                      name="name"
                       placeholder="John Doe"
                       value={form.fullName}
                       onChange={(e) => setForm({ ...form, fullName: e.target.value })}
@@ -135,6 +105,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="email"
+                      name="email"
                       placeholder="john@company.com"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -152,6 +123,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="tel"
+                      name="phone"
                       placeholder="+91 00000 00000"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -165,6 +137,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
+                      name="company"
                       placeholder="Enter Company"
                       value={form.company}
                       onChange={(e) => setForm({ ...form, company: e.target.value })}
@@ -180,6 +153,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     rows={4}
+                    name="message"
                     placeholder="Tell us about your logistics needs..."
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -191,34 +165,10 @@ const Contact = () => {
                 {/* Submit */}
                 <button
                   type="submit"
-                  disabled={status !== "idle"}
-                  className={`inline-flex items-center gap-2 px-10 py-4 rounded-xl font-extrabold text-sm shadow-lg transition-all duration-200 group
-                    ${status === "sent"
-                      ? "bg-emerald-500 text-white cursor-default"
-                      : "bg-primary-600 hover:bg-primary-700 text-white"
-                    }`}
+                  className="inline-flex items-center gap-2 px-10 py-4 rounded-xl font-extrabold text-sm shadow-lg transition-all duration-200 group bg-primary-600 hover:bg-primary-700 text-white"
                 >
-                  {status === "idle" && (
-                    <>
-                      Send Inquiry
-                      <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </>
-                  )}
-                  {status === "sending" && (
-                    <>
-                      <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
-                      </svg>
-                      Sending...
-                    </>
-                  )}
-                  {status === "sent" && (
-                    <>
-                      <CheckCircle className="h-4 w-4" />
-                      Message Sent!
-                    </>
-                  )}
+                  Send Inquiry
+                  <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>
             </FadeIn>
