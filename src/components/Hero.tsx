@@ -153,9 +153,9 @@ const Hero = () => {
                   <select className="w-full h-11 bg-white border border-slate-200 text-slate-900 rounded-xl px-4 text-sm appearance-none focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all cursor-pointer">
                     {activeTab === "international" && (
                       <>
+                        <option value="intl-courier">International Courier</option>
                         <option value="air-freight">Air Freight</option>
                         <option value="ocean-freight">Ocean Freight</option>
-                        <option value="intl-courier">International Courier</option>
                       </>
                     )}
                     {activeTab === "domestic" && (
